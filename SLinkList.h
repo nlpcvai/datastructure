@@ -30,5 +30,7 @@ public:
 template <class T>
 SLinkList<T>::SLinkList(int maxsz):maxlen(maxsz)
 {
+    sls = new Tcomp[maxlen];
+    sl = -1;
     
 }
