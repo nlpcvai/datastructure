@@ -26,3 +26,9 @@ public:
     void ListDisplay();
 
 };
+
+template <class T>
+SLinkList<T>::SLinkList(int maxsz):maxlen(maxsz)
+{
+    
+}
