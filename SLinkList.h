@@ -32,5 +32,25 @@ SLinkList<T>::SLinkList(int maxsz):maxlen(maxsz)
 {
     sls = new Tcomp[maxlen];
     sl = -1;
-    
+    for(int i = 0; i < maxlen; i++
+    sls[maxlen-1].cur = -1;
+    av = 0;
+}
+template <class T>
+SLinkList<T>::~SLinkList()
+{
+    delete[] sls;
+}
+
+template <class T>
+void SLinkList<T>::CreateList(int n)
+{
+    int value;
+    if(n > maxlen) throw "parameter is illegal";
+    cout<<"please input"<<n<<"elements value: "<<endl;
+    for(int i = 1; i <= n; i++)
+    {
+        cin>>value;
+        Insert(i, value);
+    }
 }
